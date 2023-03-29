@@ -1628,6 +1628,16 @@
       </Scan>
     </Item>
 
+	<Item Name="#EA APP老版本备份" Level="2">
+      <Description>#EA APP在升级到新版本后留下的安装包。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Program Files\Electronic Arts\EA Desktop\outdatedEADesktop"/>
+        </Activate>
+      </Scan>
+    </Item>
+
     <!--系统相关 (增强 by LittleDeng)-->
 
 	<Item Name="#CDFAccount帐户数据" Level="2">
