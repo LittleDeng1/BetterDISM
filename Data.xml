@@ -859,7 +859,7 @@
       </Scan>
     </Item>
 
-    <Item Name="#临时文件" Level="2">
+    <Item Name="#临时文件 (增强 by LittleDeng)" Level="2">
       <Description>#一些程序为特定用户产生的临时文件。</Description>
       <Group>#临时文件</Group>
       <ScanCollection>
@@ -902,6 +902,7 @@
             <General RootPath="%SystemRoot%\ServiceProfiles\*\AppData\Local\Temp\"/>
             <General RootPath="%System%\config\systemprofile\AppData\Local\Temp\"/>
             <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Local\Temp\"/>
+            <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\systemdata\temp"/>
           </Activate>
         </Scan>
       </ScanCollection>
@@ -1595,7 +1596,7 @@
       <Group>#过期文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\baidu\BaiduNetdisk\AutoUpdate"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\baidu\BaiduNetdisk\AutoUpdate\Download\Mainapp"/>
         </Activate>
       </Scan>
     </Item>
@@ -1718,7 +1719,11 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\BrowserCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\IndexedDB"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Battle.net\Logs"/>
         </Activate>
       </Scan>
@@ -1733,9 +1738,17 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\EpicGamesLauncher\Saved\webcache_*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\EpicGamesLauncher\Saved\webcache_*\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\EpicGamesLauncher\Saved\webcache_*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\EpicGamesLauncher\Saved\webcache_*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\EpicGamesLauncher\Saved\webcache_*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\EpicGamesLauncher\Saved\webcache_*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\EpicGamesLauncher\Saved\webcache_*\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Epic Games\EOSOverlay\BrowserCache\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Epic Games\EOSOverlay\BrowserCache\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Epic Games\EOSOverlay\BrowserCache\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Epic Games\EOSOverlay\BrowserCache\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Epic Games\EOSOverlay\BrowserCache\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Epic Games\EOSOverlay\BrowserCache\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Epic Games\EOSOverlay\BrowserCache\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1749,7 +1762,10 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Google\Chrome\User Data\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Google\Chrome\User Data\*\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Google\Chrome\User Data\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Google\Chrome\User Data\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Google\Chrome\User Data\*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Google\Chrome\User Data\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Google\Chrome\User Data\*\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1761,9 +1777,13 @@
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\*\IndexedDB"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\Cachee"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Edge\User Data\*\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1798,9 +1818,19 @@
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\STEAMBIG\WebCache\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\STEAMBIG\WebCache\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\STEAMBIG\WebCache\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\STEAMBIG\WebCache\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\STEAMBIG\WebCache\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\STEAMBIG\WebCache\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\STEAMBIG\WebCache\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Steam\htmlcache\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Steam\htmlcache\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Steam\htmlcache\IndexedDB"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Steam\htmlcache\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Steam\htmlcache\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Steam\htmlcache\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Steam\htmlcache\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1813,9 +1843,18 @@
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\*\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\*\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\IndexedDB"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Spotify\Browser\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1829,8 +1868,11 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\Logs"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TIDAL\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1841,6 +1883,7 @@
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\TBS"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\xweb\web\Cache"/>
@@ -1859,8 +1902,35 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\GPUCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\Service Worker\ScriptCache"/>
+        </Activate>
+      </Scan>
+    </Item>
+
+	<Item Name="#360极速浏览器缓存" Level="2">
+      <Description>#360极速浏览器留下的缓存。
+	  </Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\hisdailybackup"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\360chrome\chrome\User Data\*\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1875,8 +1945,11 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\IndexedDB"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\Media Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\SogouExplorer\Webkit\*\Media Cache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1890,6 +1963,10 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\PluginConfig\falcon_qyfragment\data\cache\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\PluginConfig\falcon_qyfragment\data\cache\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\PluginConfig\falcon_qyfragment\data\cache\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\PluginConfig\falcon_qyfragment\data\cache\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\PluginConfig\falcon_qyfragment\data\cache\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\PluginConfig\falcon_qyfragment\data\cache\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\PluginConfig\falcon_qyfragment\data\cache\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\LStyle\cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\IQIYI Video\LStyle\skin"/>
         </Activate>
@@ -1923,14 +2000,23 @@
       </Scan>
     </Item>
 
-    <Item Name="#微信缓存文件" Level="1">
-      <Description>#微信缓存文件。</Description>
+    <Item Name="#微信缓存和日志文件" Level="1">
+      <Description>#微信缓存和日志文件。</Description>
       <Warning>#删除后将无法在电脑上查看部分聊天图片。</Warning>
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChatAppStore\WeChatAppStore Files\*\Cache"/>
-          <General RootPath="%SystemDrive%\Users\*\Users\*\Documents\WeChat Files\*\FileStorage\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WeChat Files\*\FileStorage\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\Log"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\WXDrive\Logs"/>
         </Activate>
       </Scan>
     </Item>
@@ -1983,7 +2069,13 @@
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QQMusic" Flags="Directory">
 		  <Query>QQMusicUp</Query>
-		  <Query>WebkitCache\*\Service Worker</Query>
+		  <Query>WebkitCache\*\Cache</Query>
+		  <Query>WebkitCache\*\Code Cache</Query>
+		  <Query>WebkitCache\*\IndexedDB</Query>
+		  <Query>WebkitCache\*\GPUCache</Query>
+		  <Query>WebkitCache\*\LocalStorage</Query>
+		  <Query>WebkitCache\*\Service Worker\CacheStorage</Query>
+		  <Query>WebkitCache\*\Service Worker\ScriptCache</Query>
 		  </General>
         </Activate>
       </Scan>
@@ -2020,6 +2112,7 @@
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\NVIDIA\Computecache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\NVIDIA\GLCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -2049,12 +2142,13 @@
       </Scan>
     </Item>
 
-	<Item Name="#Flash (代理)缓存" Level="2">
-      <Description>#Flash (代理)缓存文件。</Description>
+	<Item Name="#Flash (代理)安装文件" Level="2">
+      <Description>#Flash (代理)安装文件。</Description>
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Flash Player"/>
+          <General RootPath="%SystemDrive%\AppData\Flash Player"/>
         </Activate>
       </Scan>
     </Item>
@@ -2089,6 +2183,18 @@
       </Scan>
     </Item>
 
+	<Item Name="#剪映专业版缓存" Level="2">
+      <Description>#剪映专业版缓存文件。</Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\JianYingPro\User Data\VELog"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\JianYingPro\User Data\Log"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\JianYingPro\User Data\Cache"/>
+        </Activate>
+      </Scan>
+    </Item>
+
 	<Item Name="#其他Chromium内核/客户端缓存和日志" Level="0">
       <Description>#其他Chromium内核/客户端留下的缓存和日志。</Description>
 	  <Warning>#可能会有误删。</Warning>
@@ -2098,7 +2204,19 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\*\Logs"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Logs"/>
         </Activate>
       </Scan>
     </Item>
@@ -2354,15 +2472,25 @@
       <Group>#临时文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\360Clock"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\NewsReader"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\GameMaster"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\360EntMsgCenter\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\360Rili\cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\Webapp"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\Reader"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\Clean\Trash"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360browser\bkinfo"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360huabao\user_data"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\DesktopRest\eye\ad_image"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\DesktopRest\eye"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\DesktopRest\cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\LiveUpdateLog"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\MultiTip\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\MultiTip"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\SoftMgr\Cache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\SoftMgr\message\cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360safe\SoftMgr\message"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360zip\v3update"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\Application\components\extyouxi"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\Application\components\extyouxi"/>
         </Activate>
       </Scan>
     </Item>
