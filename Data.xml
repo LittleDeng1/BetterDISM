@@ -349,7 +349,7 @@
         </Scan>
         <Scan>
           <Activate>
-            <General RootPath="%System%\winevt\Logs"/>
+            <General RootPath="%SystemRoot%\System32\winevt\Logs"/>
           </Activate>
         </Scan>
       </ScanCollection>
@@ -629,8 +629,8 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\Windows\Temporary Internet Files\"/>
           <General RootPath="%SystemRoot%\ServiceProfiles\*\AppData\Local\Microsoft\Windows\INetCache\"/>
           <General RootPath="%SystemRoot%\ServiceProfiles\*\AppData\Local\Microsoft\Windows\Temporary Internet Files\"/>
-          <General RootPath="%System%\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\"/>
-          <General RootPath="%System%\config\systemprofile\AppData\Local\Microsoft\Windows\Temporary Internet Files\"/>
+          <General RootPath="%SystemRoot%\System32\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\"/>
+          <General RootPath="%SystemRoot%\System32\config\systemprofile\AppData\Local\Microsoft\Windows\Temporary Internet Files\"/>
           <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\"/>
           <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Local\Microsoft\Windows\Temporary Internet Files\"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Packages\*\AC\INetCache\"/>
@@ -657,8 +657,8 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Microsoft\Windows\Cookies\"/>
           <General RootPath="%SystemRoot%\ServiceProfiles\*\AppData\Local\Microsoft\Windows\INetCookies\"/>
           <General RootPath="%SystemRoot%\ServiceProfiles\*\AppData\Roaming\Microsoft\Windows\Cookies\"/>
-          <General RootPath="%System%\config\systemprofile\AppData\Local\Microsoft\Windows\INetCookies\"/>
-          <General RootPath="%System%\config\systemprofile\AppData\Roaming\Microsoft\Windows\Cookies\"/>
+          <General RootPath="%SystemRoot%\System32\config\systemprofile\AppData\Local\Microsoft\Windows\INetCookies\"/>
+          <General RootPath="%SystemRoot%\System32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Cookies\"/>
           <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Local\Microsoft\Windows\INetCookies\"/>
           <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Roaming\Microsoft\Windows\Cookies\"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Packages\*\AC\INetCookies\"/>
@@ -822,7 +822,7 @@
       </Scan>
     </Item>
 
-    <Item Name="#Windows日志（by chenyu、YukiSakura）" Level="3">
+    <Item Name="#Windows日志（by chenyu、YukiSakura, 增强 by LittleDeng）" Level="3">
       <Description>#Windows在运行时产生的日志。</Description>
       <Group>#临时文件</Group>
       <Scan>
@@ -847,10 +847,9 @@
           <General RootPath="%SystemRoot%\Performance\WinSAT\DataStore\"/>
           <General RootPath="*\System Volume Information\Chkdsk"/>
           <General RootPath="%ProgramData%\USOShared\Logs"/>
-          <General RootPath="%System%\WDI\LogFiles\*"/>
-          <General RootPath="%System%\LogFiles\*"/>
+          <General RootPath="%SystemRoot%\System32\WDI\LogFiles\*"/>
+          <General RootPath="%SystemRoot%\System32\LogFiles\*"/>
           <General RootPath="%SystemRoot%\debug"/>
-
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Packages\*\AC\Microsoft\CLR_*\*.log"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Packages\*\AC\#!*\Microsoft\CLR_*\*.log"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Packages\*\AC\Microsoft\CLR_*\*\*.log"/>
@@ -882,8 +881,8 @@
             <General RootPath="%SystemDrive%\Users\*\AppData\Local\Packages\*\AC\#!*\Temp\"/>
 
             <General RootPath="%SystemRoot%\ServiceProfiles\*\AppData\Local\Temp\"/>
-            <General RootPath="%System%\config\systemprofile\AppData\Local\Temp\"/>
-            <General RootPath="%System%\config\systemprofile\AppData\Local\*.tmp\"/>
+            <General RootPath="%SystemRoot%\System32\config\systemprofile\AppData\Local\Temp\"/>
+            <General RootPath="%SystemRoot%\System32\config\systemprofile\AppData\Local\*.tmp\"/>
             <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Local\Temp\"/>
           </Activate>
         </Scan>
@@ -900,7 +899,7 @@
             <General RootPath="%SystemDrive%\Users\*\AppData\Local\Packages\*\AC\#!*\Temp\"/>
 
             <General RootPath="%SystemRoot%\ServiceProfiles\*\AppData\Local\Temp\"/>
-            <General RootPath="%System%\config\systemprofile\AppData\Local\Temp\"/>
+            <General RootPath="%SystemRoot%\System32\config\systemprofile\AppData\Local\Temp\"/>
             <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Local\Temp\"/>
             <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\systemdata\temp"/>
           </Activate>
@@ -908,7 +907,7 @@
       </ScanCollection>
     </Item>
 
-    <Item Name="#常见的驱动临时解压目录 (增强 by LittleDeng)" Level="3">
+    <Item Name="#常见的驱动和软件临时解压目录 (增强 by LittleDeng)" Level="3">
       <Description>#Intel、AMD、Nvidia驱动以及驱动总裁在安装时留下的解压目录。</Description>
       <Group>#临时文件</Group>
       <Scan>
@@ -918,6 +917,7 @@
             <FileExist FilePath="%SystemDrive%\Intel"/>
             <FileExist FilePath="%SystemDrive%\NVIDIA"/>
             <FileExist FilePath="%SystemDrive%\DrvPath"/>
+            <FileExist FilePath="%SystemDrive%\Autodesk"/>
           </Or>
         </Applicable>
         <Activate>
@@ -927,6 +927,7 @@
             <Query>NVIDIA</Query>
             <Query>DrvPath</Query>
             <Query>Prog</Query>
+            <Query>Autodesk</Query>
           </General>
         </Activate>
       </Scan>
@@ -1501,6 +1502,24 @@
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QQ\AuTemp"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\local\qq-chat-updater"/>
+        </Activate>
+      </Scan>
+    </Item>
+
+	<Item Name="#腾讯页游微端启动器老版本备份" Level="2">
+      <Description>#腾讯页游微端启动器在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Applicable>
+          <ImageFlags>1</ImageFlags>
+          <FileExist FilePath="%SystemDrive%\Users\*\AppData\Roaming\tencent\qqmicrogamebox"/>
+        </Applicable>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\tencent\qqmicrogamebox" Flags="Directory">
+            <Query>*.*.*.*</Query>
+            <Excluded>?GetFileVersion(%Root%launch.exe)</Excluded>
+          </General>
         </Activate>
       </Scan>
     </Item>
@@ -1512,6 +1531,7 @@
         <Activate>
           <General RootPath="%SystemDrive%\Program Files (x86)\Tencent\WeChat\[*]_tmp"/>
           <General RootPath="%SystemDrive%\Program Files\Tencent\WeChat\[*]_tmp"/>
+          <General RootPath="%SystemDrive%\ProgramData\Tencent\Wechat\Patch"/>
         </Activate>
       </Scan>
     </Item>
@@ -1638,6 +1658,40 @@
       </Scan>
     </Item>
 
+    <Item Name="#腾讯会议老版本备份" Level="2">
+      <Description>#腾讯会议在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Applicable>
+          <ImageFlags>1</ImageFlags>
+          <FileExist FilePath="%SystemDrive%\Program Files (x86)\tencent\wemeet"/>
+        </Applicable>
+        <Activate>
+          <General RootPath="%SystemDrive%\Program Files (x86)\tencent\wemeet" Flags="Directory">
+            <Query>*.*.*.*</Query>
+            <Excluded>?GetFileVersion(%Root%wemeetapp.exe)</Excluded>
+          </General>
+        </Activate>
+      </Scan>
+    </Item>
+
+    <Item Name="#搜狗输入法老版本备份" Level="2">
+      <Description>#搜狗输入法在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Applicable>
+          <ImageFlags>1</ImageFlags>
+          <FileExist FilePath="%SystemDrive%\Program Files (x86)\sougoupinyin"/>
+        </Applicable>
+        <Activate>
+          <General RootPath="%SystemDrive%\Program Files (x86)\sougoupinyin" Flags="Directory">
+            <Query>*.*.*.*</Query>
+            <Excluded>?GetFileVersion(%Root%\SogouExe\SogouExe.exe)</Excluded>
+          </General>
+        </Activate>
+      </Scan>
+    </Item>
+
     <!--系统相关 (增强 by LittleDeng)-->
 
 	<Item Name="#CDFAccount帐户数据" Level="2">
@@ -1669,6 +1723,9 @@
           <General RootPath="%SystemDrive%\ProgramData\Microsoft\Windows\Caches"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\*\UsageLogs"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Microsoft\*\ngen.log"/>
+          <General RootPath="%SystemRoot%\CheckSur"/>
+          <General RootPath="%SystemRoot%\System32\SleepStudy"/>
+          <General RootPath="%SystemRoot%\SysWOW64\data"/>
         </Activate>
       </Scan>
     </Item>
@@ -1894,11 +1951,30 @@
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\TBS"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Cache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\xweb\web\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\*\cache\XesCache"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WebView\Cache\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\xwalk\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -2091,14 +2167,17 @@
       </Scan>
     </Item>
 
-	<Item Name="#腾讯企点和腾讯课堂 缓存文件" Level="2">
+	<Item Name="#腾讯企点/课堂/会议 缓存文件" Level="2">
       <Description>#腾讯企点和腾讯课堂产生的缓存文件和升级文件，不影响使用，建议定期删除。</Description>
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent" Flags="Directory">
 		  <Query>QiDian\Logs</Query>
+		  <Query>QiDian\temp</Query>
 		  <Query>TXKeTang</Query>
+		  <Query>wemeet\global\logs</Query>
+		  <Query></Query>
 		  </General>
         </Activate>
       </Scan>
@@ -2205,6 +2284,16 @@
       </Scan>
     </Item>
 
+	<Item Name="#Adobe Illustrator缓存" Level="2">
+      <Description>#Adobe Illustrator缓存文件。</Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\com.adobe.dunamis"/>
+        </Activate>
+      </Scan>
+    </Item>
+
 	<Item Name="#其他Chromium内核/客户端缓存和日志" Level="0">
       <Description>#其他Chromium内核/客户端留下的缓存和日志。</Description>
 	  <Warning>#可能会有误删。</Warning>
@@ -2275,7 +2364,17 @@
         </Activate>
       </Scan>
     </Item>
-
+		
+	<Item Name="#网易云音乐缓存文件" Level="2">
+      <Description>#网易云音乐使用时产生的缓存文件。</Description>
+      <Group>#应用程序 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\netease\cloudmusic\cache"/>
+        </Activate>
+      </Scan>
+    </Item>
+	
 	<Item Name="#QQ拼音词库文件" Level="2">
       <Description>#QQ拼音产生的词库文件。</Description>
 	  <Warning>#清理后下载的词库需要重新下载。</Warning>
@@ -2477,6 +2576,18 @@
       </Scan>
     </Item>
 	
+	<Item Name="#xiyou缓存和日志文件" Level="2">
+      <Description>#xiyou使用时产生的缓存日志文件。</Description>
+      <Group>#临时文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\xiyou\cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\xiyou\gpucache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\xiyou\logs"/>
+        </Activate>
+      </Scan>
+    </Item>
+
 	<Item Name="#360系列缓存和日志文件" Level="2">
       <Description>#360系列软件使用时产生的缓存和日志文件。</Description>
       <Group>#临时文件 (增强 by LittleDeng)</Group>
@@ -2510,7 +2621,9 @@
       <Group>#临时文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\kingsoft\WPS Cloud Files\userdata\qing\filecache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\kingsoft\klog"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\kingsoft\wpsphoto+\cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\kingsoft\office6\OfficeSpace\wpsoffice\QingApp\cachePath"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\kingsoft\office6\cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\kingsoft\office6\templates\download"/>
