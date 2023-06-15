@@ -980,6 +980,7 @@
             <Query>QQ\Skins\FunChat</Query>
             <Query>QQ\Temp</Query>
             <Query>QQ\webkit_cache</Query>
+            <Query>QQ\webkitex_cache</Query>
           </General>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\TCData"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\Users\*\WinTemp\*"/>
@@ -1503,6 +1504,7 @@
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QQ\AuTemp"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\local\qq-chat-updater"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\local\qq_guild-updater"/>
         </Activate>
       </Scan>
     </Item>
@@ -1532,19 +1534,73 @@
           <General RootPath="%SystemDrive%\Program Files (x86)\Tencent\WeChat\[*]_tmp"/>
           <General RootPath="%SystemDrive%\Program Files\Tencent\WeChat\[*]_tmp"/>
           <General RootPath="%SystemDrive%\ProgramData\Tencent\Wechat\Patch"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WXWork\upgrade"/>
         </Activate>
       </Scan>
     </Item>
 
-	<Item Name="#千牛工作台老版本备份" Level="2">
+	<Item Name="#千牛工作台老版本备份 (更新测试)" Level="2">
       <Description>#千牛工作台在升级到新版本后留下的备份文件和安装包，在故障时回滚到老版本。</Description>
       <Group>#过期文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
-          <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Roaming\aliworkbench\Update"/>
+          <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Roaming\Aliworkbench\Update"/>
+          <General RootPath="%SystemDrive%\Windows\SysWOW64\config\systemprofile\AppData\Roaming\Ali1688workbench\Update"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\aef5\AliWorkbench\BackupCache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\AliWorkbench"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\AliWorkbench\Update"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Ali1688Workbench\Update"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\aef\aliim\Cache"/>
+          <General RootPath="%SystemDrive%\Program Files (x86)\AliWorkbench" Flags="Directory">
+            <Query>*.*.*N</Query>
+            <Excluded>?GetIniData(%Root%AliWorkbench.ini,Common,Version)</Excluded>
+          </General>
+          <General RootPath="%SystemDrive%\Program Files (x86)\Ali1688Workbench" Flags="Directory">
+            <Query>*.*.*Z</Query>
+            <Excluded>?GetIniData(%Root%AliWorkbench.ini,Common,Version)</Excluded>
+          </General>
+        </Activate>
+      </Scan>
+    </Item>
+
+	<Item Name="#阿里旺旺老版本备份 (更新测试)" Level="2">
+      <Description>#阿里旺旺在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Program Files (x86)\AliWangWang" Flags="Directory">
+            <Query>*.*.*C</Query>
+            <Excluded>?GetIniData(%Root%Aliim.ini,Common,Version)</Excluded>
+          </General>
+        </Activate>
+      </Scan>
+    </Item>
+
+	<Item Name="#阿里巴巴基础安全服务老版本备份 (更新测试)" Level="2">
+      <Description>#阿里巴巴基础安全服务在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Program Files (x86)\AlibabaProtect" Flags="Directory">
+            <Query>*.*.*.*</Query>
+            <Excluded>?GetFileVersion(%Root%uninstallre.exe)</Excluded>
+          </General>
+        </Activate>
+      </Scan>
+    </Item>
+
+    <Item Name="#360浏览器老版本备份" Level="2">
+      <Description>#360浏览器在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Applicable>
+          <ImageFlags>1</ImageFlags>
+          <FileExist FilePath="%APPDATA%\360se6\Application"/>
+        </Applicable>
+        <Activate>
+          <General RootPath="%APPDATA%\360se6\Application" Flags="Directory">
+            <Query>*.*.*.*</Query>
+            <Excluded>?GetFileVersion(%Root%360se.exe)</Excluded>
+          </General>
         </Activate>
       </Scan>
     </Item>
@@ -1952,6 +2008,13 @@
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\TBS"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\xweb\web\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\*\cache\XesCache"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WebView\Cache\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\qq_guild\Cache"/>
@@ -1975,6 +2038,51 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Service Worker\CacheStorage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\Tencent\MiniBrowser\UserData\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Service Worker\ScriptCache"/>
+        </Activate>
+      </Scan>
+    </Item>
+
+	<Item Name="#阿里内置浏览器缓存" Level="2">
+      <Description>#阿里内置浏览器留下的缓存和日志。
+	  </Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\QianniuCEF\*\*\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\QianniuCEF\*\*\CodeCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\QianniuCEF\*\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\QianniuCEF\*\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\QianniuCEF\*\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\QianniuCEF\*\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\QianniuCEF\*\*\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\CodeCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -1985,6 +2093,7 @@
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\HisDailyBackup"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\IndexedDB"/>
@@ -1992,6 +2101,7 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Service Worker\CacheStorage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360se6\User Data\*\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\HisDailyBackup"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\secoresdk\360se6\User Data\*\IndexedDB"/>
@@ -2095,13 +2205,6 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChatAppStore\WeChatAppStore Files\*\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WeChat Files\*\FileStorage\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\Log"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Cache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Code Cache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\IndexedDB"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\GPUCache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Local Storage"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Service Worker\CacheStorage"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\xweb\web_ng\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\WXDrive\Logs"/>
         </Activate>
       </Scan>
@@ -2242,6 +2345,16 @@
       </Scan>
     </Item>
 
+	<Item Name="#流氓软件缓存和安装文件" Level="2">
+      <Description>#流氓软件的缓存喝安装文件。</Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\kyqwppdf\ktool_update"/>
+        </Activate>
+      </Scan>
+    </Item>
+
 	<Item Name="#系统/Office字体缓存" Level="2">
       <Description>#系统/Office字体缓存文件。</Description>
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
@@ -2272,6 +2385,25 @@
       </Scan>
     </Item>
 
+	<Item Name="#Skype缓存数据和安装包" Level="2">
+      <Description>#Skype运行时产生的缓存文件和安装包。</Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Microsoft\Skype for Desktop" Flags="Directory">
+		  <Query>Skype-Setup.exe</Query>
+		  <Query>Cache</Query>
+		  <Query>Code Cache</Query>
+		  <Query>IndexedDB</Query>
+		  <Query>GPUCache</Query>
+		  <Query>LocalStorage</Query>
+		  <Query>Service Worker\CacheStorage</Query>
+		  <Query>Service Worker\ScriptCache</Query>
+		  </General>
+        </Activate>
+      </Scan>
+    </Item>
+
 	<Item Name="#剪映专业版缓存" Level="2">
       <Description>#剪映专业版缓存文件。</Description>
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
@@ -2290,6 +2422,18 @@
       <Scan>
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\com.adobe.dunamis"/>
+        </Activate>
+      </Scan>
+    </Item>
+
+	<Item Name="#其他不明软件的缓存和日志" Level="0">
+      <Description>#其他不明软件留下的缓存和日志。</Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\utForpc\*\*.log"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\utForpc\*\*.log.1"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\utForpc\*\*.log.2"/>
         </Activate>
       </Scan>
     </Item>
@@ -2628,6 +2772,7 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\kingsoft\office6\cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\kingsoft\office6\templates\download"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WPS Cloud Files\*\cachedata"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\wps_download"/>
         </Activate>
       </Scan>
     </Item>
