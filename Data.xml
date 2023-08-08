@@ -1559,6 +1559,10 @@
             <Query>*.*.*Z</Query>
             <Excluded>?GetIniData(%Root%AliWorkbench.ini,Common,Version)</Excluded>
           </General>
+		  <General RootPath="%SystemDrive%\Users\*\AppData\RoamingUpdate\0\remote\0_beta_package" Flags="Directory">
+            <Query>*.*.*E</Query>
+            <Excluded>?GetIniData(%Root%AliWorkbench.ini,Common,Version)</Excluded>
+          </General>
         </Activate>
       </Scan>
     </Item>
@@ -1576,7 +1580,7 @@
       </Scan>
     </Item>
 
-	<Item Name="#阿里巴巴基础安全服务老版本备份 (更新测试)" Level="2">
+	<Item Name="#阿里巴巴基础安全服务老版本备份" Level="2">
       <Description>#阿里巴巴基础安全服务在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
       <Group>#过期文件 (增强 by LittleDeng)</Group>
       <Scan>
@@ -1588,7 +1592,28 @@
         </Activate>
       </Scan>
     </Item>
-
+        <Item Name="#阿里卖家老版本备份 (更新测试)" Level="2">
+      <Description>#阿里卖家在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Program Files (x86)\AlibabaSupplier" Flags="Directory">
+            <Query>*.*.*E</Query>
+            <Excluded>?GetIniData(%Root%Aliim.ini,Common,Version)</Excluded>
+          </General>
+        </Activate>
+      </Scan>
+    </Item>
+        <Item Name="#阿里系软件老版本备份 (更新测试)" Level="2">
+      <Description>#阿里系软件在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\RoamingUpdate\0\remote\0_beta_package.released"/>
+        </Activate>
+      </Scan>
+    </Item>
+	
     <Item Name="#360浏览器老版本备份" Level="2">
       <Description>#360浏览器在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
       <Group>#过期文件 (增强 by LittleDeng)</Group>
@@ -2072,7 +2097,7 @@
       </Scan>
     </Item>
 
-	<Item Name="#阿里内置浏览器缓存" Level="2">
+	<Item Name="#阿里内置浏览器缓存和日志" Level="2">
       <Description>#阿里内置浏览器留下的缓存和日志。
 	  </Description>
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
@@ -2092,6 +2117,11 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Service Worker\CacheStorage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Service Worker\ScriptCache"/>
+		  <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\*.log"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\*\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\*\Cache"/>
         </Activate>
       </Scan>
     </Item>
@@ -2435,6 +2465,16 @@
       </Scan>
     </Item>
 
+	<Item Name="#百度云盘缓存" Level="2">
+      <Description>#百度云盘缓存文件。</Description>
+      <Group>#缓存文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\baidu\BaiduNetdisk\users\*\BaiduYunCacheFileV0.*"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\baidu\BaiduNetdisk\users\*\BaiduYunGuanjia.db"/>
+        </Activate>
+      </Scan>
+    </Item>
 	<Item Name="#钉钉缓存和日志" Level="2">
       <Description>#钉钉缓存和文件。</Description>
       <Group>#缓存文件 (增强 by LittleDeng)</Group>
@@ -2780,6 +2820,7 @@
       <Group>#临时文件 (增强 by LittleDeng)</Group>
       <Scan>
         <Activate>
+          <General RootPath="%SystemDrive%\ProgramData\360safe\Cactus"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\360Clock"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\NewsReader"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\360Safe\GameMaster"/>
