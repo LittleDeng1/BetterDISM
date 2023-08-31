@@ -2728,6 +2728,17 @@
       </Scan>
     </Item>
 
+    <Item Name="#SketchUp备份文件" Level="0">
+      <Description>#SketchUp备份的文件。</Description>
+      <Warning>#删除后将无法恢复之前备份的历史版本。</Warning>
+      <Group>#备份文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\SketchUp\*\SketchUp\working\SKETCHUP\RecoveredFiles"/>
+        </Activate>
+      </Scan>
+    </Item>
+
     <!--临时文件 (增强 by LittleDeng)-->
 
     <Item Name="#常见的根目录临时文件" Level="3">
