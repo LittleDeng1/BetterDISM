@@ -1741,6 +1741,16 @@
       </Scan>
     </Item>
 
+	<Item Name="#哔哩哔哩老版本备份" Level="2">
+      <Description>#哔哩哔哩在升级到新版本后留下的安装包。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\bilibili-updater"/>
+        </Activate>
+      </Scan>
+    </Item>
+
     <Item Name="#腾讯会议老版本备份" Level="2">
       <Description>#腾讯会议在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
       <Group>#过期文件 (增强 by LittleDeng)</Group>
@@ -2117,7 +2127,7 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Service Worker\CacheStorage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\1688CEF\*\Service Worker\ScriptCache"/>
-		  <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\*.log"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\*.log"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\AlibabaSupplierCEF\*\Code Cache"/>
@@ -2319,6 +2329,7 @@
 		  <Query>QiDian\temp</Query>
 		  <Query>TXKeTang</Query>
 		  <Query>wemeet\global\logs</Query>
+		  <Query>wemeet\global\DynamicResourcePackage</Query>
 		  <Query></Query>
 		  </General>
         </Activate>
@@ -2543,6 +2554,7 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Service Worker\ScriptCache"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Logs"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Local\*\Log"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Local\kwmusic\cefcache"/>
         </Activate>
       </Scan>
     </Item>
