@@ -1005,6 +1005,18 @@
       </Scan>
     </Item>
 
+    <Item Name="#IS语音 (iSpeak) 临时文件" Level="2">
+      <Description>#IS语音 (iSpeak)运行时产生的一些临时文件以及日志，建议定期删除。</Description>
+      <Group>#临时文件</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\iSpeak\talk\">
+            <Query>cache</Query>
+          </General>
+        </Activate>
+      </Scan>
+    </Item>
+
     <Item Name="#腾讯相关软件下载目录" Level="3">
       <Description>#腾讯相关软件更新时会在此留下残留。</Description>
       <Group>#临时文件</Group>
@@ -1768,6 +1780,16 @@
       </Scan>
     </Item>
 
+	<Item Name="#腾讯企点老版本备份" Level="2">
+      <Description>#腾讯企点在升级到新版本后留下的安装包。</Description>
+      <Group>#过期文件 (增强 by LittleDeng)</Group>
+      <Scan>
+        <Activate>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\AuTemp\*\NewPkg"/>
+        </Activate>
+      </Scan>
+    </Item>
+
     <Item Name="#搜狗输入法老版本备份" Level="2">
       <Description>#搜狗输入法在升级到新版本后留下的备份文件，在故障时回滚到老版本。</Description>
       <Group>#过期文件 (增强 by LittleDeng)</Group>
@@ -1956,6 +1978,7 @@
           <General RootPath="%SystemDrive%\Program Files (x86)\Microsoft\EdgeUpdate\Download"/>
           <General RootPath="%SystemDrive%\Program Files\Microsoft\EdgeUpdate\Download"/>
           <General RootPath="%SystemDrive%\ProgramData\Microsoft\EdgeUpdate\Log"/>
+          <General RootPath="%SystemDrive%\Program Files (x86)\Microsoft\EdgeUpdate\Install"/>
         </Activate>
       </Scan>
     </Item>
@@ -2089,13 +2112,7 @@
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Service Worker\CacheStorage"/>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\WeChat\radium\web\profiles\web_shell\Service Worker\ScriptCache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Cache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Code Cache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\IndexedDB"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\GPUCache"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Local Storage"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Service Worker\CacheStorage"/>
-          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache\*\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QiDian\webkit_cache"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Cache"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Code Cache"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\IndexedDB"/>
@@ -2103,6 +2120,27 @@
           <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Local Storage"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Service Worker\CacheStorage"/>
           <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\CefCache\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\WXWorkCefCache\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\WXWorkCefCache\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\WXWorkCefCache\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\WXWorkCefCache\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\WXWorkCefCache\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\WXWorkCefCache\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\*\WXWorkCefCache\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\qtcef\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\qtcef\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\qtcef\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\qtcef\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\qtcef\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\qtcef\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\Documents\WXwork\qtcef\Service Worker\ScriptCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\qbs_cache\Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\qbs_cache\Code Cache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\qbs_cache\IndexedDB"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\qbs_cache\GPUCache"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\qbs_cache\Local Storage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\qbs_cache\Service Worker\CacheStorage"/>
+          <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\qbs_cache\Service Worker\ScriptCache"/>
         </Activate>
       </Scan>
     </Item>
@@ -2293,6 +2331,7 @@
 		  <Query>CacheFile</Query>
 		  <Query>Episode</Query>
 		  <Query>Image</Query>
+		  <Query>image_vn</Query>
 		  <Query>Log</Query>
 		  <Query>webkit_cache</Query>
 		  </General>
@@ -2307,6 +2346,7 @@
         <Activate>
           <General RootPath="%SystemDrive%\Users\*\AppData\Roaming\Tencent\QQMusic" Flags="Directory">
 		  <Query>QQMusicUp</Query>
+		  <Query>QQMusicCache</Query>
 		  <Query>WebkitCache\*\Cache</Query>
 		  <Query>WebkitCache\*\Code Cache</Query>
 		  <Query>WebkitCache\*\IndexedDB</Query>
